@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <rect width="500" height="300" fill="#2962FF" />
+  <rect x="100" y="80" width="300" height="140" fill="#1E48C8" />
+  <circle cx="250" cy="150" r="60" fill="#0D2CA0" />
+  <text x="250" y="155" font-family="Arial" font-size="14" fill="white" text-anchor="middle">柔术初学者训练</text>
+</svg> 

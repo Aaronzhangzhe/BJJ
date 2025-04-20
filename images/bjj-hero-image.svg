@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1101" height="796" viewBox="0 0 1101 796">
+  <rect width="1101" height="796" fill="#E0E0E0" />
+  <rect x="300" y="200" width="500" height="400" fill="#BDBDBD" />
+  <circle cx="550" cy="400" r="150" fill="#9E9E9E" />
+  <text x="550" y="400" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="32" fill="#333333">BJJ 技术展示图片</text>
+  <text x="550" y="450" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="24" fill="#333333">1101 x 796 像素</text>
+</svg> 

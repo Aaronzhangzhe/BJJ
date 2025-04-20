@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="#ffffff" />
+  <path d="M50,20 Q70,10 90,30 Q110,50 90,70 Q70,90 50,60 Q30,40 50,20 Z" fill="#f2a900" />
+  <text x="120" y="50" font-family="Arial" font-size="16" font-weight="bold" fill="#000000">Roll and Flow</text>
+</svg> 
