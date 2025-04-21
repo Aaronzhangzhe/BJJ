@@ -672,3 +672,250 @@ footer {
         max-height: 350px;
     }
 }
+
+/* Discover */
+.discover-nav {
+    display: none;
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.discover-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-left a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav-center img {
+    height: 35px;
+}
+
+.nav-right .search-text {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* About BJJ part */
+.about-bjj {
+    padding: 40px 0;
+}
+
+.bjj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.bjj-card {
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.bjj-card:nth-child(3) {
+    border: 4px solid #1a73e8;
+}
+
+.bjj-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.6);
+}
+
+.bjj-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.bjj-overlay h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* media */
+@media (max-width: 900px) {
+    .bjj-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .bjj-card {
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-left a, .search-text {
+        font-size: 1rem;
+    }
+    
+    .nav-center img {
+        height: 40px;
+    }
+    
+    .bjj-overlay h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* copyright */
+.copyright {
+    padding: 20px 0;
+    background-color: #f5f5f5;
+    border-top: 1px solid #eee;
+}
+
+.copyright .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.copyright-links a {
+    margin-right: 30px;
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.copyright-links a:hover {
+    color: #666;
+}
+
+.copyright-text {
+    color: #333;
+    font-size: 0.85rem;
+}
+
+/* media */
+@media (max-width: 600px) {
+    .copyright .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .copyright-links {
+        margin-bottom: 15px;
+    }
+    
+    .copyright-links a {
+        margin-right: 15px;
+        font-size: 0.8rem;
+    }
+    
+    .copyright-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* hero image */
+.hero-image-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.hero-image-container {
+    max-width: 1101px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 796px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-image-overlay h1 {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #333;
+}
+
+/* Responsive styles for hero image section */
+@media (max-width: 768px) {
+    .hero-image-container img {
+        height: auto;
+        max-height: 500px;
+    }
+    
+    .hero-image-overlay h1 {
+        font-size: 3rem;
+    }
+    
+    .learn-more-btn {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image-overlay h1 {
+        font-size: 2rem;
+    }
+    
+    .learn-more-btn {
+        font-size: 0.9rem;
+        padding: 10px 25px;
+    }
+}
