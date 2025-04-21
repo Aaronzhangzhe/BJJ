@@ -427,3 +427,51 @@ W3Schools. CSS Website Layout - Hero Image. W3Schools.com, https://www.w3schools
 .program-card:hover img {
     transform: scale(1.05);
 }
+/* Programs media*/
+@media (max-width: 900px) {
+    .programs {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .program-grid {
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .program-card {
+        height: 250px;
+    }
+
+    .program-overlay h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .programs {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .program-card {
+        height: 200px;
+    }
+
+    .program-overlay h3 {
+        font-size: 1.3rem;
+    }
+}
