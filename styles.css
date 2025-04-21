@@ -1954,3 +1954,140 @@ Coyier, Chris. "A Complete Guide to Flexbox." CSS-Tricks, https://css-tricks.com
         padding: 15px;
     }
 }
+/* Card video
+Coyier, Chris. "Aspect Ratio Boxes." CSS-Tricks, https://css-tricks.com/aspect-ratio-boxes/.
+Mozilla Contributors. "Video: The Video Embed Element." MDN Web Docs, Mozilla, https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video.  */
+.card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.card-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+}
+
+.program-card {
+    cursor: pointer;
+}
+
+/* Likes and comment
+"Font Awesome Icons." Font Awesome, Fonticons, Inc., https://fontawesome.com/icons. 
+Coyier, Chris. "Practical CSS Button Styling." CSS-Tricks, https://css-tricks.com/css-buttons/. */
+.like-btn {
+    cursor: pointer;
+    transition: color 0.2s;
+    margin-right: 5px;
+}
+
+.like-btn:hover, .like-btn.liked {
+    color: #ff5555;
+}
+
+.like-btn.liked {
+    font-weight: bold;
+}
+
+.post-comments {
+    cursor: pointer;
+}
+
+.post-comments i {
+    margin-right: 5px;
+}
+
+.comments-section {
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.comments-list {
+    margin-bottom: 15px;
+}
+
+.comment-item {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.comment-content {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    resize: vertical;
+    min-height: 60px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.submit-comment {
+    align-self: flex-end;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-comment:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .comments-section {
+        padding: 10px 0;
+    }
+    
+    .comment-form {
+        flex-direction: column;
+    }
+    
+    .submit-comment {
+        align-self: stretch;
+        margin-top: 10px;
+    }
+} 
