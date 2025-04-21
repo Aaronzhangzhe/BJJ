@@ -1780,3 +1780,177 @@ footer {
         margin-top: 62px;
     }
 }
+/* "CSS Navigation Bar." W3Schools, https://www.w3schools.com/css/css_navbar.asp.
+Coyier, Chris. "Styling a Navigation Menu." CSS-Tricks, https://css-tricks.com/styling-a-navigation-menu/.  */
+.nav-text {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* "How TO - Top Navigation Responsive." W3Schools, https://www.w3schools.com/howto/howto_js_topnav_responsive.asp. 
+Coyier, Chris. "Styling a Navigation Menu." CSS-Tricks, https://css-tricks.com/styling-a-navigation-menu/.  */
+@media (max-width: 900px) {
+    .nav-right .nav-text {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+}
+
+@media (min-width: 901px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+}
+
+/* Coyier, Chris. "A Complete Guide to Flexbox." CSS-Tricks, https://css-tricks.com/snippets/css/a-guide-to-flexbox/. */
+.logo h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mozilla Contributors. "Responsive Design." MDN Web Docs, Mozilla, https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design. 
+Coyier, Chris. "A Complete Guide to Flexbox." CSS-Tricks, https://css-tricks.com/snippets/css/a-guide-to-flexbox/.  */
+@media (max-width: 900px) {
+    .forum-section {
+        margin-top: 107px;
+        padding-top: 20px;
+    }
+}
+
+/* Citations Page Styles */
+.citations-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.citations-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.citations-section .intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.citations-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.citations-content h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.citation-list {
+    margin-bottom: 30px;
+}
+
+.citation-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.citation-item:last-child {
+    border-bottom: none;
+}
+
+.citation-item h3 {
+    font-size: 1.4rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.citation-item ul {
+    padding-left: 20px;
+}
+
+.citation-item ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.citation-item ul ul {
+    margin-top: 10px;
+}
+
+.citation-note {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 40px;
+}
+
+.citation-note p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.citation-note a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+/* Responsive Styles for Citations Page */
+@media (max-width: 768px) {
+    .citations-section {
+        padding: 40px 0;
+    }
+    
+    .citations-section h1 {
+        font-size: 2rem;
+    }
+    
+    .citations-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .citation-item h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .citations-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .citations-section .intro-text {
+        font-size: 1rem;
+    }
+    
+    .citations-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .citation-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .citation-note {
+        padding: 15px;
+    }
+}
