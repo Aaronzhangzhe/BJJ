@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'ProdigySans-Black', sans-serif;
 }
 
 body {
@@ -183,8 +183,14 @@ W3Schools. CSS Website Layout - Hero Image. W3Schools.com, https://www.w3schools
     position: relative;
     z-index: 2;
 }
+@font-face{
+    font-family: 'ProdigySans-Black';
+    src: url('/images/ProdigySans-Black.woff')format('.woff'),
+    url('/images/ProdigySans-Black.woff2')format('.woff2');
 
+}
 .hero h1 {
+    font-family: 'ProdigySans-Black', sans-serif;
     font-size: 4.5rem;
     margin-bottom: 20px;
     font-weight: 700;
@@ -727,7 +733,7 @@ footer {
 }
 
 .bjj-card:nth-child(3) {
-    border: 4px solid #1a73e8;
+    border: 4px solid #ffffff;
 }
 
 .bjj-card img {
