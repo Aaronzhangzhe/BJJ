@@ -427,7 +427,8 @@ W3Schools. CSS Website Layout - Hero Image. W3Schools.com, https://www.w3schools
 .program-card:hover img {
     transform: scale(1.05);
 }
-/* Programs media*/
+/* Programs media 
+Mozilla Contributors. Using Media Queries. MDN Web Docs, Mozilla, https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries.*/
 @media (max-width: 900px) {
     .programs {
         padding: 60px 0;
@@ -474,4 +475,85 @@ W3Schools. CSS Website Layout - Hero Image. W3Schools.com, https://www.w3schools
     .program-overlay h3 {
         font-size: 1.3rem;
     }
+}
+/* Footer section */
+footer {
+    background-color: #333333;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding-right: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-column:last-child {
+    padding-right: 0;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.footer-logo span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.footer-column p {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.footer-column h4 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.footer-column ul {
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    color: #a0a0a0;
+    font-size: 0.95rem;
+}
+
+.footer-column ul li a {
+    transition: color 0.3s;
+    color: #a0a0a0;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+
+.hours-list li {
+    margin-bottom: 10px;
+    color: #a0a0a0;
 }
