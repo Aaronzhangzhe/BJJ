@@ -96,8 +96,8 @@
                             <!-- comment shows here -->
                         </div>
                         <div class="comment-form">
-                            <textarea placeholder="写下你的评论..." class="comment-input"></textarea>
-                            <button class="submit-comment">发表评论</button>
+                            <textarea placeholder="leave your comment" class="comment-input"></textarea>
+                            <button class="submit-comment">leave your comment</button>
                         </div>
                     </div>
                 </div>
@@ -121,11 +121,228 @@
                             <!-- comment would display here -->
                         </div>
                         <div class="comment-form">
-                            <textarea placeholder="写下你的评论..." class="comment-input"></textarea>
-                            <button class="submit-comment">发表评论</button>
+                            <textarea placeholder="Leave your comment" class="comment-input"></textarea>
+                            <button class="submit-comment">leave your comment</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Mozilla Contributors. "Window: localStorage." MDN Web Docs, Mozilla, https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage. 
+     Mozilla Contributors. "KeyboardEvent: key." MDN Web Docs, Mozilla, https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key.
+     "Handling Events." JavaScript.info, https://javascript.info/introduction-browser-events.
+     Coyier, Chris. "LocalStorage and You." CSS-Tricks, https://css-tricks.com/localstorage/.-->
+    <script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Remove click event from script.js and prevent original alert behavior
+        const originalForumPosts = document.querySelectorAll('.forum-post');
+        if (originalForumPosts.length > 0) {
+            originalForumPosts.forEach(post => {
+                // Clone node to remove existing event listeners
+                const newPost = post.cloneNode(true);
+                post.parentNode.replaceChild(newPost, post);
+            });
+        }
+
+        // Suppress alert for "View post details"
+        window.originalAlert = window.alert;
+        window.alert = function(message) {
+            if (message === 'View post details') {
+                console.log('Alert suppressed:', message);
+                return;
+            }
+            window.originalAlert(message);
+        };
+
+        // Assign unique ID to each post
+        const posts = document.querySelectorAll('.forum-post');
+        posts.forEach((post, index) => {
+            post.dataset.postId = `post-${index}`;
+
+            // Prevent original click behavior unless it's on interactive elements
+            post.addEventListener('click', function(e) {
+                if (
+                    e.target.closest('.like-btn') ||
+                    e.target.closest('.post-comments') ||
+                    e.target.closest('.comment-form') ||
+                    e.target.closest('.submit-comment')
+                ) {
+                    return;
+                }
+                e.stopPropagation();
+            });
+        });
+
+        // Load like and comment data from localStorage
+        loadDataFromStorage();
+
+        // Like button functionality
+        const likeButtons = document.querySelectorAll('.like-btn');
+        likeButtons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent post click
+
+                const post = this.closest('.forum-post');
+                const postId = post.dataset.postId;
+                const likesCountEl = this.parentElement.querySelector('.likes-count');
+                let likesCount = parseInt(likesCountEl.textContent);
+
+                if (this.classList.contains('liked')) {
+                    // Unlike
+                    this.classList.remove('liked');
+                    this.classList.remove('fas');
+                    this.classList.add('far');
+                    likesCount--;
+                } else {
+                    // Like
+                    this.classList.add('liked');
+                    this.classList.remove('far');
+                    this.classList.add('fas');
+                    likesCount++;
+                }
+
+                likesCountEl.textContent = likesCount;
+
+                // Save like state to localStorage
+                savePostData(postId, {
+                    liked: this.classList.contains('liked'),
+                    likesCount: likesCount
+                });
+            });
+        });
+
+        // Toggle comments section display
+        const commentTriggers = document.querySelectorAll('.post-comments');
+        commentTriggers.forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent triggering post click
+
+                const post = this.closest('.forum-post');
+                const commentsSection = post.querySelector('.comments-section');
+
+                commentsSection.style.display = commentsSection.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+
+        // Submit new comment
+        const submitButtons = document.querySelectorAll('.submit-comment');
+        submitButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const post = this.closest('.forum-post');
+                const postId = post.dataset.postId;
+                const input = post.querySelector('.comment-input');
+                const commentText = input.value.trim();
+
+                if (commentText) {
+                    // Add comment to post
+                    addCommentToPost(post, commentText);
+                    input.value = '';
+                }
+            });
+        });
+
+        // Allow comment submission with Enter key
+        const commentInputs = document.querySelectorAll('.comment-input');
+        commentInputs.forEach(input => {
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    const submitButton = this.parentElement.querySelector('.submit-comment');
+                    submitButton.click();
+                }
+            });
+        });
+
+        // Add comment element to post
+        function addCommentToPost(post, commentText) {
+            const postId = post.dataset.postId;
+            const commentsList = post.querySelector('.comments-list');
+            const commentsCountEl = post.querySelector('.comments-count');
+            let commentsCount = parseInt(commentsCountEl.textContent);
+
+            // Generate a random username (should use logged-in user in real cases)
+            const randomNames = ['Guest User', 'BJJ Enthusiast', 'Newbie', 'BJJ Student'];
+            const randomName = randomNames[Math.floor(Math.random() * randomNames.length)];
+
+            // Create new comment element
+            const newComment = document.createElement('div');
+            newComment.className = 'comment-item';
+            newComment.innerHTML = `
+                <div class="comment-author">${randomName}</div>
+                <div class="comment-content">${commentText}</div>
+            `;
+
+            // Append to comment list
+            commentsList.appendChild(newComment);
+
+            // Update comment count
+            commentsCount++;
+            commentsCountEl.textContent = commentsCount;
+
+            // Save comment to localStorage
+            const commentData = {
+                author: randomName,
+                content: commentText,
+                timestamp: new Date().toISOString()
+            };
+
+            saveCommentToPost(postId, commentData, commentsCount);
+        }
+
+        // Load stored likes and comments from localStorage
+        function loadDataFromStorage() {
+            posts.forEach(post => {
+                const postId = post.dataset.postId;
+
+                // Load like data
+                const likeData = JSON.parse(localStorage.getItem(`${postId}_like`)) || {};
+                if (likeData.likesCount !== undefined) {
+                    const likesCountEl = post.querySelector('.likes-count');
+                    const likeBtn = post.querySelector('.like-btn');
+
+                    likesCountEl.textContent = likeData.likesCount;
+
+                    if (likeData.liked) {
+                        likeBtn.classList.add('liked');
+                        likeBtn.classList.remove('far');
+                        likeBtn.classList.add('fas');
+                    }
+                }
+
+                // Load comment data
+                const comments = JSON.parse(localStorage.getItem(`${postId}_comments`)) || [];
+                const commentsCount = comments.length;
+
+                if (commentsCount > 0) {
+                    const commentsCountEl = post.querySelector('.comments-count');
+                    commentsCountEl.textContent = commentsCount;
+
+                    const commentsList = post.querySelector('.comments-list');
+                    comments.forEach(comment => {
+                        const commentEl = document.createElement('div');
+                        commentEl.className = 'comment-item';
+                        commentEl.innerHTML = `
+                            <div class="comment-author">${comment.author}</div>
+                            <div class="comment-content">${comment.content}</div>
+                        `;
+                        commentsList.appendChild(commentEl);
+                    });
+                }
+            });
+        }
+
+        // Save post like data to localStorage
+        function savePostData(postId, data) {
+            localStorage.setItem(`${postId}_like`, JSON.stringify(data));
+        }
+
+        // Save comment to localStorage
+        function saveCommentToPost(postId, commentData, totalCount) {
+            const existingComments = JSON.parse(localStorage.getItem(`${postId}_comments`)) || [];
+            existingComments.push(commentData);
+            localStorage.setItem(`${postId}_comments`, JSON.stringify(existingComments));
+        }
+    });
+</script>
