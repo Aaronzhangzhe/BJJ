@@ -1144,3 +1144,639 @@ footer {
 .mobile-menu-backdrop.active {
     display: block;
 }
+/* About BJJ pages */
+.about-intro {
+    padding: 70px 0 50px;
+    background-color: #fff;
+}
+
+.about-intro .container {
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.about-intro h1 {
+    font-size: 2.6rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+.about-content {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.about-content .container {
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.content-card {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.content-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.content-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.core-principles {
+    padding: 70px 0;
+    background-color: #fff;
+}
+
+.core-principles .container {
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.principles-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.principle-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.principle-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.principle-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+/* About BJJ page */
+.about-intro {
+    padding: 70px 0 50px;
+    background-color: #fff;
+}
+
+.about-intro .container {
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.about-intro h1 {
+    font-size: 2.6rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+.about-content {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.about-content .container {
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.content-card {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.content-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.content-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.core-principles {
+    padding: 70px 0;
+    background-color: #fff;
+}
+
+.core-principles .container {
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.principles-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.principle-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.principle-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.principle-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* media */
+@media (max-width: 900px) {
+    .content-grid, .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .about-intro h1 {
+        font-size: 2.2rem;
+    }
+    
+    .principles-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-intro {
+        padding: 40px 0 30px;
+    }
+    
+    .about-intro h1 {
+        font-size: 1.8rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+    }
+    
+    .content-card, .principle-card {
+        padding: 25px;
+    }
+    
+    .content-card h2 {
+        font-size: 1.4rem;
+    }
+    
+    .principle-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .core-principles {
+        padding: 40px 0;
+    }
+}
+
+/* Training Options */
+.training-options {
+    padding: 70px 0;
+    background-color: #f9f9f9;
+}
+
+.training-options .container {
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.training-options h1 {
+    font-size: 2.6rem;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.option-card {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.option-card h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.option-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.option-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.option-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Training Options media */
+@media (max-width: 900px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .training-options h1 {
+        font-size: 2.2rem;
+    }
+    
+    .option-card h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .training-options {
+        padding: 40px 0;
+    }
+    
+    .training-options h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .option-card {
+        padding: 25px;
+    }
+    
+    .option-card h2 {
+        font-size: 1.4rem;
+    }
+    
+    .option-card p {
+        font-size: 1rem;
+    }
+    
+    .option-image {
+        height: 200px;
+    }
+}
+
+/* about bjj footer */
+.site-footer {
+    background-color: #fff;
+    padding: 60px 0 30px;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-section h3 {
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #333;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #333;
+}
+
+/* footer media */
+@media (max-width: 900px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        margin-bottom: 30px;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer-section {
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-nav {
+        gap: 20px;
+    }
+
+    .footer-section {
+        flex: 0 0 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+/* mobile section */
+@media (max-width: 900px) {
+    header {
+        display: none;
+    }
+
+    .discover-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero, .about-intro, .bjj-title {
+        margin-top: 62px;
+    }
+
+    .nav-left a:hover {
+        color: #666;
+    }
+
+    .nav-right .search-text:hover {
+        color: #666;
+    }
+}
+
+/* mobile button */
+.mobile-menu-btn {
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+
+.mobile-menu-btn span {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease;
+    transform-origin: left center;
+}
+
+.mobile-menu-btn.active span:first-child {
+    transform: rotate(45deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:last-child {
+    transform: rotate(-45deg);
+}
+
+/* Sparks, Chris. "Hamburger Menu with a Side of React Hooks and CSS Transitions." CSS-Tricks, 11 Jan. 2021, https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-css-transitions/. 
+"How TO - Top Navigation Responsive." W3Schools, https://www.w3schools.com/howto/howto_js_topnav_responsive.asp.*/
+@media (max-width: 900px) {
+    .discover-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .discover-nav .container {
+        padding: 15px 20px;
+    }
+
+    .nav-left a {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .nav-center img {
+        height: 32px;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 62px);
+        background-color: #fff;
+        padding: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    .mobile-menu.active {
+        transform: translateX(0);
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu ul li {
+        margin: 20px 0;
+    }
+
+    .mobile-menu ul li a {
+        color: #333;
+        font-size: 1.2rem;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .mobile-menu-backdrop {
+        position: fixed;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 62px);
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 998;
+    }
+
+    .mobile-menu-backdrop.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .hero, .about-intro, .bjj-title {
+        margin-top: 62px;
+    }
+}
