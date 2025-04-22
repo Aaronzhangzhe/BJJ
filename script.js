@@ -6,16 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const backdrop = document.querySelector('.mobile-menu-backdrop');
     const body = document.body;
 
-    if (menuBtn && mobileMenu && backdrop) {
-        menuBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            backdrop.classList.toggle('active');
-            body.classList.toggle('no-scroll');
-        });
 
+    if (mobileMenuBtns.length > 0 && mobileMenu && backdrop) {
+        mobileMenuBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                backdrop.classList.toggle('active');
+                body.classList.toggle('no-scroll');
+            });
+        });
+        
         backdrop.addEventListener('click', function() {
-            if (menuBtn) menuBtn.classList.remove('active');
+            mobileMenuBtns.forEach(btn => {
+                btn.classList.remove('active');
+            });
             if (mobileMenu) mobileMenu.classList.remove('active');
             backdrop.classList.remove('active');
             body.classList.remove('no-scroll');
