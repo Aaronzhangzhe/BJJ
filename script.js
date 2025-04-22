@@ -1,3 +1,11 @@
+// Mozilla Contributors. "Media Queries." MDN Web Docs, Mozilla Foundation, https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries. 
+// “CSS Website Layout - Hero Image.” W3Schools, https://www.w3schools.com/howto/howto_css_hero_image.asp.
+// How TO - Top Navigation Responsive.” W3Schools, https://www.w3schools.com/howto/howto_js_topnav_responsive.asp.
+//Sparks, Chris. “Hamburger Menu with a Side of React Hooks and CSS Transitions.” CSS-Tricks, 11 Jan. 2021, https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-css-transitions/.
+//Coyier, Chris. “A Complete Guide to Flexbox.” CSS-Tricks, https://css-tricks.com/snippets/css/a-guide-to-flexbox/. 
+//“Font Awesome Icons.” Font Awesome, Fonticons Inc., https://fontawesome.com/icons.
+//Mozilla Contributors. “Video: The Video Embed Element.” MDN Web Docs, Mozilla Foundation, https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video. 
+//Coyier, Chris. “Aspect Ratio Boxes.” CSS-Tricks, https://css-tricks.com/aspect-ratio-boxes/. 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu interaction
