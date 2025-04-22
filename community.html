@@ -222,7 +222,12 @@
                 const post = this.closest('.forum-post');
                 const commentsSection = post.querySelector('.comments-section');
 
-                commentsSection.style.display = commentsSection.style.display === 'none' ? 'block' : 'none';
+                  
+                if (commentsSection.style.display === 'none') {
+                        commentsSection.style.display = 'block';
+                    } else {
+                        commentsSection.style.display = 'none';
+                    }
             });
         });
 
@@ -238,6 +243,8 @@
                 if (commentText) {
                     // Add comment to post
                     addCommentToPost(post, commentText);
+
+                    //clear the comment
                     input.value = '';
                 }
             });
@@ -345,4 +352,6 @@
             localStorage.setItem(`${postId}_comments`, JSON.stringify(existingComments));
         }
     });
-</script>
+    </script>
+</body>
+</html> 

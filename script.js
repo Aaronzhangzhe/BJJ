@@ -1,7 +1,8 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu interaction
-    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const menuBtn = document.querySelector('.mobile-menu-btn, .hamburger');
+    const mobileMenuBtns = document.querySelectorAll('.mobile-menu-btn, .hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
     const backdrop = document.querySelector('.mobile-menu-backdrop');
     const body = document.body;
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 body.classList.toggle('no-scroll');
             });
         });
-        
+
         backdrop.addEventListener('click', function() {
             mobileMenuBtns.forEach(btn => {
                 btn.classList.remove('active');
